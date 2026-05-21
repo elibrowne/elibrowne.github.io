@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eli Browne</title>
+    <title>CV · Eli Browne</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,6 @@
             <div class="intro-text">
                 <h1 class="heading">Eli Browne</h1>
                 <p class="heading-sub"><span class="ipa" lang="en-fonipa">ˈiːlaɪ bɹaʊn</span></p>
-                
             </div>
         </header>
 
@@ -37,46 +36,26 @@
         </nav>
 
         <main>
-            <h2> About me </h2>
-            <p>Hi! I'm Eli.</p>
+            🏗️ Still under construction here...
+            <h2>Education</h2>
             <ul>
-                <li>I'm a junior at <span class="tag">🌲 Stanford University</span> studying <span class="tag">🔡 linguistics</span> and <span class="tag">💻 computer science</span>.</li>
-                <li>I grew up in San Diego!</li>
-                <li>This summer, I'm going to be interning at <span class="tag">🐪 Jane Street</span> in <span class="tag">🗽 New York City</span> as a software engineer.</li>
-                <li>I'm a big fan of racquet sports — especially squash — and college football.</li>
+                <li><span class="tag">🌲 Stanford University</span> — B.S. Symbolic Systems and M.S. Computer Science, expected 2027</li>
             </ul>
 
-            <h2> Fun fact </h2>
-            <span id="fun-fact-text">Loading…</span>
-            <a href="#" id="fun-fact-reroll" class="fun-fact-reroll">↻ new fact</a>
+            <h2>Experience</h2>
+            <ul>
+                <li><span class="tag">🐪 Jane Street</span> — SWE Intern, Summer 2026</li>
+                <li><span class="tag">🤖 Amazon</span> — SWE Intern, Alexa+, Summer 2025</li>
+                <li><span class="tag">💬 Stanford NLP Group</span> — CURIS Research Intern, Summer 2024</li>
+                <li><span class="tag">🧬 Scripps Research</span> — Research Intern, Summer 2023</li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>Languages: English, Spanish</li>
+                <li>Tools: to be added...</li>
+            </ul>
         </main>
     </div>
-
-    <script>
-        const factEl = document.getElementById('fun-fact-text');
-        let factsList = [];
-
-        function showRandomFact() {
-            if (factsList.length === 0) return;
-            const i = Math.floor(Math.random() * factsList.length);
-            factEl.innerHTML = factsList[i];
-        }
-
-        fetch('facts.json')
-            .then(res => res.json())
-            .then(facts => {
-                factsList = facts;
-                showRandomFact();
-            })
-            .catch(() => {
-                factEl.innerHTML = "My middle name is William.";
-            });
-
-        document.getElementById('fun-fact-reroll')
-            .addEventListener('click', (e) => {
-                e.preventDefault();
-                showRandomFact();
-            });
-    </script>
 </body>
 </html>
